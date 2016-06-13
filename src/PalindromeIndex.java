@@ -1,5 +1,9 @@
 import java.util.Scanner;
-
+/**
+ * 
+ * @author banve02
+ *
+ */
 public class PalindromeIndex {
 
 	public static void main(String[] args) {
