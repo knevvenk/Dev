@@ -60,6 +60,17 @@ class BinaryTree
         /* now recur on right subtree */
         printPreorder(node.right);
     }
+    
+    void printOuterNodes(Node node){
+    	if(node == null)
+    		return;
+    	
+    	if(node.left == null && node.right == null){
+    		System.out.print(node.data+" ");
+    	}
+    	printOuterNodes(node.left);
+    	printOuterNodes(node.right);
+    }
 
     // Wrappers over above recursive functions
     void printPostorder()  {     printPostorder(root);  }
@@ -84,5 +95,8 @@ class BinaryTree
 
         System.out.println("\nPostorder traversal of binary tree is ");
         tree.printPostorder();
+        
+        System.out.println("\nPrint outer Nodes");
+        tree.printOuterNodes(tree.root);
     }
 }
