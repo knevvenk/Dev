@@ -98,5 +98,7 @@ class BinaryTree
         
         System.out.println("\nPrint outer Nodes");
         tree.printOuterNodes(tree.root);
+        
+        System.out.println("Test branch file");
     }
 }
