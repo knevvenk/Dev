@@ -14,5 +14,6 @@ public class Town {
         
         System.out.println("TestBranch 1 changes");
         System.out.println("TestBranch 1 changes - 2nd change");
+        System.out.println("TestBranch 1 changes - 3rd change");
     }
 }
