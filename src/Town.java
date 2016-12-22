@@ -13,5 +13,6 @@ public class Town {
         minNumOfFloors(town, k);
         
         System.out.println("TestBranch 1 changes");
+        System.out.println("TestBranch 1 changes - 2nd change");
     }
 }
