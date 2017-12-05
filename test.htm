@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<script language=javascript>
+	function OnPageInit()
+    {
+		setInterval("getTxnStatus()", 5000);
+
+	}
+	
+	function getTxnStatus(){
+	
+	$.ajax({
+		url: "http://155.35.137.209:8081/vpas/api/IdentityCheckService/getTxnResponse",
+		type: "POST",
+		crossDomain: true,
+		processData: true,
+
+		dataType: 'text',
+		data: "txnProxyPan",
+		contentType: "text/plain",
+		headers: { 'Access-Control-Allow-Origin': '*' },
+		
+		success: function(result){
+			alert(result);
+			console.log("It worked!");
+			
+			var res = JSON.parse(result);
+			document.getElementById("status").value = res.txnStatus;
+			
+			
+		},
+
+		error: function(){
+			// enable the inputs
+			alert("error");
+		}
+	});
+
+}
+
+	
+	</script>
+	
+	<script src="C:/Users/banve02/Desktop/jquery.min.js"></script>
+	<script src="C:/Users/banve02/Desktop/jquery.mediaqueries1.19.js"></script>
+<body onload="OnPageInit();">
+Venkat</br>
+Transaction Status is : <input type="text" id="status">
+</body>
+
+</head>
+</html>
