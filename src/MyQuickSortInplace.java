@@ -50,5 +50,6 @@ public class MyQuickSortInplace {
             ar[i]=in.nextInt();
         }
         sort(ar,0,ar.length-1);
+        in.close();
     }
 }

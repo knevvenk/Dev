@@ -3,7 +3,7 @@
  */
 
 interface Executable{
-    void execute(String s);
+    void execute(String s);    
 }
 
 class Runner{
@@ -19,12 +19,12 @@ public class LamdaEx {
         runner.run(new Executable() {
             @Override
             public void execute(String s) {
-                System.out.println("In executable method "+s+""+i);
+                System.out.println("In executable method "+s+" "+i);
             }
         });
 
         System.out.println("================================");
-        runner.run((s1) -> System.out.println("In lamdaEx execute method "+s1+""+i));
+        runner.run((String s1) -> System.out.println("In lamdaEx execute method "+s1+" "+i));
 //        i =9;
     }
 }

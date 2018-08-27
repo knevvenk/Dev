@@ -62,5 +62,6 @@ public class NextLexicoStr {
             listOfStr.add(getNextLexicographic(s));
         }
         listOfStr.forEach(System.out::println);
+        in.close();
     }
 }

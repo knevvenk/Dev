@@ -44,10 +44,10 @@ class C extends B{
 public class Test1 {
     public static void main(String[] args){
         A a = new C();
-        C c = new C();
-        c.f1();
+//        C c = new C();
+        a.f1();
         int i = 1_2;
-        System.out.println(c.x);
+//        System.out.println(c.x);
     }
 
 }

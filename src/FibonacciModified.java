@@ -22,5 +22,6 @@ public class FibonacciModified {
         int b = in.nextInt();
         int n = in.nextInt();
         fibonacciModified(a,b,n);
+        in.close();
     }
 }

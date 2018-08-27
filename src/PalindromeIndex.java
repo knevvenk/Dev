@@ -22,6 +22,8 @@ public class PalindromeIndex {
 			System.out.println(returnWrongIndex(input[i]));
 		}
 		
+		in.close();
+		
 	}
 
 	private static int returnWrongIndex(String s) {

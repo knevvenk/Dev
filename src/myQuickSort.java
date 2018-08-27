@@ -56,5 +56,6 @@ public class myQuickSort {
             ar[i]=in.nextInt();
         }
         quickSort(ar,0,ar.length-1);
+        in.close();
     }
 }
