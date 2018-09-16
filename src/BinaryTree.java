@@ -89,7 +89,9 @@ class BinaryTree
     		return 0;
     	}    	    	
     	int left = find(node.left, target, k);
+    	
     	if(left != -1) {
+    		System.out.println("Left -- "+left);
 //    		if(left+1 ==k) {
 //    			System.out.println(node.data);
 //    			System.out.println();
@@ -99,7 +101,9 @@ class BinaryTree
     		return 1+left;
     	}
     	int right = find(node.right, target, k);
+    	
     	if(right !=-1) {
+    		System.out.println("Right -- "+right);
 //    		if(right+1 == k) {
 //    			System.out.println(node.data);
 //    			System.out.println();
@@ -151,7 +155,7 @@ class BinaryTree
         System.out.println("\nPrint outer Nodes");
         tree.printOuterNodes(tree.root);
         
-        Node target = tree.root.left.left;
+        Node target = tree.root.left.left.left;
         System.out.println("");
         System.out.println("Print 2 distance nodes from node 4");
         tree.find(tree.root, target, 4);
