@@ -8,7 +8,7 @@
 public class SubsetSumProblem {
 	private static int[] input = {3,5,2,9,10};
 	public static void main(String[] args) {
-		int sum = 14;
+		int sum = 15;
 		
 		findSubsetSum(input, sum);
 	}

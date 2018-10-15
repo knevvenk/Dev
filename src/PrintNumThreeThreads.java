@@ -7,12 +7,12 @@ public class PrintNumThreeThreads {
 		
 		PrintNumThreeThreads print = new PrintNumThreeThreads();
 		Thread t1 = new Thread(print.new NumPrinter(10, 1));
-		Thread t2 = new Thread(print.new NumPrinter(10, 2));
-		Thread t3 = new Thread(print.new NumPrinter(10, 0));
+		Thread t2 = new Thread(print.new NumPrinter(10, 0));
+//		Thread t3 = new Thread(print.new NumPrinter(10, 0));
 		
 		t1.start();
 		t2.start();
-		t3.start();
+//		t3.start();
 	}
 	
 	class NumPrinter implements Runnable{
@@ -27,7 +27,7 @@ public class PrintNumThreeThreads {
 		public void run() {		
 			while(count<=size) {
 				synchronized (lock) {
-					if(count%3 != threadId) {
+					if(count%2 != threadId) {
 						try {
 							lock.wait();
 						} catch (InterruptedException e) {

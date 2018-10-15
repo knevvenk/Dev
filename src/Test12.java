@@ -18,6 +18,10 @@ interface I2{
         System.out.println("in I1");
     }
 }
+
+interface I3 extends I1, I2{
+	public static String name = "i3";
+}
 public class Test12 implements I1, I2{
 
     public static void method(int i, Map map){

@@ -8,7 +8,11 @@ interface Executable{
     void execute(String s);    
     
     default void test() {
-    	System.out.println("Default Method");
+    	System.out.println("Default test Method");
+    }
+    
+    static void test1() {
+    	System.out.println("interface static  method");
     }
 }
 
@@ -37,6 +41,7 @@ public class LamdaEx {
         Executable e = s1 -> System.out.println("In lamdaEx execute method "+s1+" "+i);
         e.execute("Bandi");
         e.test();
+        Executable.test1();
 //        i =9;
     }
 }

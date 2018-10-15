@@ -1,4 +1,6 @@
- 	
+import java.util.ArrayList;
+import java.util.List;
+
 public class TrapRainWater {
 
 	public static void main(String[] args) {
@@ -21,8 +23,9 @@ public class TrapRainWater {
 //				
 //			}
 //		}
-//		
+//		List
 //		System.out.println(count);
+		
 		
 		int low = 0, high = arr.length-1;
 		int left_max = 0, right_max=0;
