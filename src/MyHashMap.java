@@ -13,7 +13,9 @@ public class MyHashMap {
 		map.put("three", "bthreeV");
 		map.put("four", "efourV");
 		map.put("five", "cfiveV");
+		
 		System.out.println(map);
+		System.out.println(map.get("FIVE"));
 		System.out.println("+++++++++++++++++++++++++++=");
 		Iterator it = map.entrySet().iterator();
 		while (it.hasNext()) {
