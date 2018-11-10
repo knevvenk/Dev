@@ -155,7 +155,7 @@ class BinaryTree
         System.out.println("\nPrint outer Nodes");
         tree.printOuterNodes(tree.root);
         
-        Node target = tree.root.left.left.left;
+        Node target = tree.root.right.left;
         System.out.println("");
         System.out.println("Print 2 distance nodes from node 4");
         tree.find(tree.root, target, 4);

@@ -118,7 +118,19 @@ public class MyTree {
 //        System.out.println(tree.height());
 
         tree.inorder();
+        System.out.println("\n");
         tree.preOrder();
+        System.out.println("\n");
         tree.postOrder();
+        System.out.println("\n-----------------");
+        System.out.println(tree.maxHeight(tree.root));
     }
+
+	private int maxHeight(Node node) {
+		if(node == null)
+			return 0;
+		
+		int h = Math.max(maxHeight(node.left), maxHeight(node.right))+1;
+		return h;
+	}
 }

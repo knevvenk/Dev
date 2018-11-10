@@ -19,6 +19,7 @@ public class LIS {
 		int max =0;
 		for(int i =0; i<LIS.length;i++) {
 			System.out.print(LIS[i]);
+			System.out.print(", ");
 			if(LIS[i]>max)
 				max = LIS[i];
 		}

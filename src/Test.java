@@ -47,6 +47,7 @@ public static int solution(String S, int K) {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
+		System.out.println((char)50);
 		System.out.println(solution("SMSSMSSMS SMSSMSSMS", 4));
 
 		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++\n");

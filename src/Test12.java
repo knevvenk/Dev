@@ -14,6 +14,7 @@ interface I1{
 
 interface I2{
     public static String name="i2";
+    void m2t();
     default void m2(){
         System.out.println("in I1");
     }
@@ -22,7 +23,7 @@ interface I2{
 interface I3 extends I1, I2{
 	public static String name = "i3";
 }
-public class Test12 implements I1, I2{
+public class Test12 implements I3{
 
     public static void method(int i, Map map){
         i+=5;
@@ -42,5 +43,12 @@ public class Test12 implements I1, I2{
         System.out.println(map.get(1));
         method(i, map);
         System.out.println(map.size()+"  "+map.get("one"));
+        
+        I3 i3 = new Test12();
+        i3.m2t();
     }
+	@Override
+	public void m2t() {
+		System.out.println("m2t");
+	}
 }
