@@ -32,6 +32,17 @@ public class Test12 implements I3{
         map.put("two", "two");
     }
     public static void main(String[] args){
+    	
+
+		
+		
+		String s1 = "3DSECURE";
+		String s2 = "3dSEcurE";
+		System.out.println(s1+"   "+s2);
+		if(s1.equals(s2.toUpperCase()))
+			System.out.println("TRUEEEE");
+		else
+			System.out.println("FALSEEE");
 
         System.out.println(I1.name);
 //        System.out.println(name);

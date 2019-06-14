@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 class TrieNode{
@@ -31,7 +33,7 @@ public class TrieImpl {
         current.isLastNode = true;
     }
 	
-	public TrieNode search(String word){
+	public List<String> search(String word){
 		
 		Map<Character, TrieNode> tempChild = root.child;
 		TrieNode tempTrie = null;
@@ -45,10 +47,31 @@ public class TrieImpl {
 			}else
 				return null;
 		}
+		List<String> wordsList = new ArrayList<>(); 
+		getWords(word, tempTrie, wordsList); 
 		printTrieNode(tempTrie);
-		return tempTrie;
+		printWordsList(wordsList);
+		return wordsList;
 	}
 	
+	private void printWordsList(List<String> wordsList) {
+		System.out.println();
+		System.out.println(wordsList);
+		
+	}
+
+	private void getWords(String word, TrieNode tempTrie, List<String> wordsList) {		
+		if(tempTrie.isLastNode) {
+			wordsList.add(word);
+		}
+		Iterator<Character> charIterator= tempTrie.child.keySet().iterator();
+		
+		while(charIterator.hasNext()) {
+			Character ch = charIterator.next();
+			getWords(word+ch, tempTrie.child.get(ch), wordsList);
+		}
+	}
+
 	public void delete(String s){
 		
 	}

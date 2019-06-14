@@ -46,6 +46,10 @@ class C extends B{
 }
 public class Test1 {
     public static void main(String[] args){
+    	
+    	String s ="aa  bb  cc  ";
+    	s = s.trim();
+    	System.out.println((int)'a');
         A a = new C();
 //        C c = new C();
         a.f1();
