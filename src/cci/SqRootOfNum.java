@@ -47,7 +47,7 @@ public class SqRootOfNum {
 	}
 
 	public static void main(String[] args) {
-		int n = 18;
-		System.out.println(sqrt(n));
+		int n = 22;
+		System.out.println(findSqRoot(n,3));
 	}
 }

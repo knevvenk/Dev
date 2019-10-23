@@ -1,4 +1,6 @@
+import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,10 +34,12 @@ public class Test12 implements I3{
         map.put("two", "two");
     }
     public static void main(String[] args){
-    	
+    	BigInteger value = new BigInteger("91221152921504606883236");
+    	System.out.println(value);
+//    	System.out.println(Long.parseLong("11529215046068832360"));
 
-		
-		
+    	String[] list = "DEVICEID".split(",");
+		System.out.println(list);
 		String s1 = "3DSECURE";
 		String s2 = "3dSEcurE";
 		System.out.println(s1+"   "+s2);

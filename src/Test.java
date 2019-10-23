@@ -10,7 +10,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.TimeZone;
 
 /**
@@ -20,6 +22,8 @@ import java.util.TimeZone;
  */
 public class Test {
 
+	private String aa;
+	
 	/*public static int solution(String S, int K) {
 
 		String[] strArr = S.split(" ");
@@ -46,11 +50,35 @@ public class Test {
 			return -1;
 	}*/
 
+	public String getAa() {
+		return aa;
+	}
+
+	public void setAa(String aa) {
+		this.aa = aa;
+	}
+
 	public static void main(String[] args) throws UnsupportedEncodingException {
+		System.out.println(System.getenv("test"));
+		String[] arr = "".split(",");
+		System.out.println(arr.length+" "+arr[0]);
 		
 		
-		
-		
+				
+//		
+//		Map<String, String> map = null;
+//		Map<String, String> map1 = new HashMap<>();
+//		map1.put("test1", "test1");
+//		try {
+//			map.putAll(map1);
+//		} catch (RuntimeException e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println(map);
+//		String data = "ABCD";
+//		Test t = new Test();
+//		t.setAa(data += "EFGH");
+//		System.out.println(t.getAa());
 		/*try {
 			URL url = new URL("tcp", "10.10.10.10", -1, "/token-service/api/v1/tokenize");
 			System.out.println(url.toString());
